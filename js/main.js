@@ -112,9 +112,10 @@ async function display(inputCity, method) {
   tomorrowDegreeNight.innerHTML =
     future.forecast.forecastday[1].day.mintemp_c + "<sup>o</sup>C";
   tomorrowCustom.innerHTML = future.forecast.forecastday[1].day.condition.text;
-  afterTomorrowDegree.innerHTML = future.forecast.forecastday[2].day.maxtemp_c;
+  afterTomorrowDegree.innerHTML =
+    future.forecast.forecastday[2].day.maxtemp_c + "<sup>o</sup>C";
   afterTomorrowDegreeNight.innerHTML =
-    future.forecast.forecastday[2].day.mintemp_c;
+    future.forecast.forecastday[2].day.mintemp_c + "<sup>o</sup>C";
   afterTomorrowCustom.innerHTML =
     future.forecast.forecastday[2].day.condition.text;
 
