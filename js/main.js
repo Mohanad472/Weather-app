@@ -31,7 +31,7 @@ display("london", "search");
 
 // async function getDataall(inputCity) {
 //   let x = await fetch(
-//     `http://api.weatherapi.com/v1/search.json?key=25711540ec664bbb99f184630251904&q=${inputCity}`
+//     `https://api.weatherapi.com/v1/search.json?key=25711540ec664bbb99f184630251904&q=${inputCity}`
 //   );
 //   let data;
 //   if (x.ok) {
@@ -48,7 +48,7 @@ display("london", "search");
 
 async function getDataBySearch(inputCity) {
   let x = await fetch(
-    `http://api.weatherapi.com/v1/search.json?key=25711540ec664bbb99f184630251904&q=${inputCity}`
+    `https://api.weatherapi.com/v1/search.json?key=25711540ec664bbb99f184630251904&q=${inputCity}`
   );
   let data;
   if (x.ok) {
@@ -59,7 +59,7 @@ async function getDataBySearch(inputCity) {
 
   let future;
   let y = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=25711540ec664bbb99f184630251904&q=${data[0].name}&days=3`
+    `https://api.weatherapi.com/v1/forecast.json?key=25711540ec664bbb99f184630251904&q=${data[0].name}&days=3`
   );
   if (y.ok) {
     future = await y.json();
@@ -71,7 +71,7 @@ async function getDataBySearch(inputCity) {
 async function getDataByLocation(myLatitude, myLongitude) {
   let future;
   let y = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=25711540ec664bbb99f184630251904&q=${myLatitude},${myLongitude}&days=3`
+    `https://api.weatherapi.com/v1/forecast.json?key=25711540ec664bbb99f184630251904&q=${myLatitude},${myLongitude}&days=3`
   );
   if (y.ok) {
     future = await y.json();
@@ -82,7 +82,7 @@ async function getDataByLocation(myLatitude, myLongitude) {
 
 async function display(inputCity, method) {
   // let x = await fetch(
-  //   `http://api.weatherapi.com/v1/search.json?key=25711540ec664bbb99f184630251904&q=${inputCity}`
+  //   `https://api.weatherapi.com/v1/search.json?key=25711540ec664bbb99f184630251904&q=${inputCity}`
   // );
   // let data;
   // if (x.ok) {
@@ -93,7 +93,7 @@ async function display(inputCity, method) {
 
   // let future;
   // let y = await fetch(
-  //   `http://api.weatherapi.com/v1/forecast.json?key=25711540ec664bbb99f184630251904&q=${data[0].name}&days=3`
+  //   `https://api.weatherapi.com/v1/forecast.json?key=25711540ec664bbb99f184630251904&q=${data[0].name}&days=3`
   // );
   // if (y.ok) {
   //   future = await y.json();
